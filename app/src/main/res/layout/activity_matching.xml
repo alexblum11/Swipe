@@ -23,52 +23,18 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="73dp">
-
-            <TabHost
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                android:text="Menu Band Placeholder"
+                android:backgroundTint="?attr/colorButtonNormal"
+                android:layout_marginTop="16dp"
+                android:id="@+id/textView"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TabWidget
-                        android:id="@android:id/tabs"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                    <FrameLayout
-                        android:id="@android:id/tabcontent"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <LinearLayout
-                            android:id="@+id/tab1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/tab2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/tab3"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                        </LinearLayout>
-                    </FrameLayout>
-                </LinearLayout>
-            </TabHost>
         </LinearLayout>
 
         <LinearLayout
@@ -77,25 +43,20 @@
             android:layout_height="364dp"
             android:backgroundTint="?attr/colorControlHighlight">
 
-            <TextView
-                android:text="I like working with numbers"
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_height="match_parent"
                 android:layout_width="match_parent"
-                android:layout_height="367dp"
-                android:id="@+id/textView"
-                android:backgroundTint="?attr/colorButtonNormal"
-                android:backgroundTintMode="src_atop"
-                android:background="?attr/colorButtonNormal"
-                android:textSize="18sp"
-                android:fontFamily="sans-serif"
-                android:lineSpacingExtra="12sp"
-                android:textAlignment="center"
-                android:textAllCaps="false" />
+                android:scrollbars="vertical"
+                android:scrollbarAlwaysDrawVerticalTrack="true" />
+
         </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -106,25 +67,27 @@
                     android:text="No"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button5"
-                    android:layout_weight="0.41"
+                    android:id="@+id/buttonNo"
+                    android:layout_weight="0.45"
                     android:backgroundTint="@android:color/holo_red_dark" />
 
                 <Button
                     android:text="Skip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button6"
-                    android:layout_weight="0.20" />
+                    android:id="@+id/buttonSkip"
+                    android:layout_weight="0.1" />
 
                 <Button
                     android:text="Yes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button7"
+                    android:id="@+id/buttonYes"
                     android:layout_weight="0.45"
                     android:backgroundTint="@android:color/holo_green_light" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+
 </RelativeLayout>
