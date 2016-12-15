@@ -1,26 +1,19 @@
 package com.example.alexblum.swipe;
 
-
-import android.annotation.TargetApi;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -45,7 +38,6 @@ public class FragmentPage extends android.support.v4.app.Fragment implements Vie
 
         View view = inflater.inflate(R.layout.fragment_page,container, false);
         textView = (TextView)view.findViewById(R.id.textView);
-        //textView.setMovementMethod(new ScrollingMovementMethod());
 
         buttonNo = (Button) view.findViewById(R.id.buttonNo);
         buttonNo.setOnClickListener(this);

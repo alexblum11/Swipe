@@ -4,14 +4,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.widget.Toast;
-
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 /**
  * Created by Alexander on 12/11/2016.
@@ -22,6 +14,7 @@ public class SwipeAdapter extends FragmentStatePagerAdapter {
         super(fm);
     }
 
+    private Integer count;
 
     @Override
     public Fragment getItem(final int i) {
@@ -37,12 +30,17 @@ public class SwipeAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-//     FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        final DatabaseReference dataQuestions = database.getReference();
-// dataQuestions.child("questions").addListenerForSingleValueEvent(new ValueEventListener() {
+        count = 10;
+
+// ****** Unfortunately does not work... Will look for a workaround later. ********
+//
+//        FirebaseDatabase database = FirebaseDatabase.getInstance();
+//        DatabaseReference dataQuestions = database.getReference("questions");
+//        dataQuestions.addListenerForSingleValueEvent(new ValueEventListener() {
+//
 //            @Override
 //            public void onDataChange(DataSnapshot dataSnapshot) {
-//                count = (int) dataSnapshot.getChildrenCount();
+//                count = (int) (long) dataSnapshot.getChildrenCount();
 //            }
 //
 //            @Override
@@ -51,6 +49,6 @@ public class SwipeAdapter extends FragmentStatePagerAdapter {
 //            }
 //        });
 
-        return 10;
+        return count;
     }
 }
