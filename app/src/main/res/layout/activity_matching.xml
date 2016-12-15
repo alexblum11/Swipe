@@ -23,6 +23,21 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="73dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:ems="10"
+                android:id="@+id/editTextQ" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonQ" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -40,7 +55,7 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="364dp"
+            android:layout_height="match_parent"
             android:backgroundTint="?attr/colorControlHighlight">
 
             <android.support.v4.view.ViewPager
@@ -49,44 +64,8 @@
                 android:layout_width="match_parent"
                 android:scrollbars="vertical"
                 android:scrollbarAlwaysDrawVerticalTrack="true" />
-
         </LinearLayout>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignParentBottom="true">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:text="No"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/buttonNo"
-                    android:layout_weight="0.45"
-                    android:backgroundTint="@android:color/holo_red_dark" />
-
-                <Button
-                    android:text="Skip"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/buttonSkip"
-                    android:layout_weight="0.1" />
-
-                <Button
-                    android:text="Yes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/buttonYes"
-                    android:layout_weight="0.45"
-                    android:backgroundTint="@android:color/holo_green_light" />
-            </LinearLayout>
-        </LinearLayout>
     </LinearLayout>
 
 
